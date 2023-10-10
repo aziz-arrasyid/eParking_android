@@ -8,8 +8,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background=""
+    android:background="@color/white"
     tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:src="@drawable/iconlogo1"
+        android:layout_gravity="center" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -65,14 +71,37 @@
                 android:layout_marginTop="20dp"/>
 
             <Button
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/loginButton"
+                android:layout_marginTop="30dp"
+                android:background="@color/biru"
                 android:text="Login"
                 android:textSize="18sp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_selector" />
+                android:textColor="@android:color/white" />
+
         </LinearLayout>
 
+
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create by "
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/abu" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMK NEGERI 4 TANJUNGPINANG"
+        android:textAlignment="center"
+        android:textColor="@color/biru"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
 </LinearLayout>
