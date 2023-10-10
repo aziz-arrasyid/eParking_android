@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">eParking</string>
+    <string name="loginToUrParking">Login to your eParking</string>
+    <string name="username">Username</string>
+    <string name="created_by">created by</string>
+    <string name="SMK_NEGERI_4_TANJUNGPINANG">SMK NEGERI 4 TANJUNGPINANG</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="content_description_image_eParking">eParking_image</string>
 </resources>
