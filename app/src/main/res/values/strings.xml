@@ -7,4 +7,6 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="content_description_image_eParking">eParking_image</string>
+    <string name="admin">admin</string>
+    <string name="parking">jukir</string>
 </resources>
