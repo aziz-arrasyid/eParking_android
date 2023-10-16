@@ -1,14 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/parentLayout"
     tools:context=".DashboardParking">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topCardView"
+        android:layout_width="389dp"
+        android:layout_height="433dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="183dp">
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_button"
+            android:text="Tambah Data"
+            android:textColor="@color/white1"
+            android:translationX="240dp"
+            android:translationY="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topCardView"
+            app:layout_constraintEnd_toEndOf="@+id/topCardView"
+            app:layout_constraintTop_toTopOf="@+id/topCardView" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="203dp"
+            android:layout_height="36dp"
+            android:background="@drawable/custom_edittext1"
+            android:translationX="170dp"
+            android:translationY="60dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Cari..." />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="43dp" />
+
     <TextView
+        android:id="@+id/userText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hallo, user"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="eParking"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/logoImageView"
+        tools:layout_editor_absoluteY="43dp"/>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="67dp"
+        android:layout_height="53dp"
+        android:src="@drawable/logo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nestedCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/parking"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="97dp">
+
+        <TextView
+            android:id="@+id/dataTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:text="Data Jukir"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
