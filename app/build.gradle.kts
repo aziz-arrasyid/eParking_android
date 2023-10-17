@@ -48,6 +48,9 @@ android {
 
 dependencies {
 
+    implementation("com.intuit.ssp:ssp-android:1.0.6")
+    implementation("com.intuit.sdp:sdp-android:1.0.6")
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation ("androidx.room:room-runtime:2.3.0")
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     annotationProcessor ("androidx.room:room-compiler:2.3.0")

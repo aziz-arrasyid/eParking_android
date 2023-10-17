@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="none">-->
+
+<!--        -->
+<!--    </ScrollView>-->
+    <TableLayout
+        android:id="@+id/TableData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="339dp"
+            android:layout_height="67dp"
+            android:background="@color/blue"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/NoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"
+                android:text="@string/No"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/NoPlatData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cell_shape"
+                android:padding="2dp"
+                android:text="@string/plat"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/kendaraanData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                android:background="@drawable/cell_shape"
+                android:text="@string/kendaraan"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/statusData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                android:background="@drawable/cell_shape"
+                android:text="@string/status"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/hargaParkir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                android:background="@drawable/cell_shape"
+                android:text="@string/pembayaran"
+                android:textColor="@color/white" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

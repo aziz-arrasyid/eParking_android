@@ -53,12 +53,19 @@ class LoginActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                         if (response.isSuccessful) {
                             val loginResponse = response.body()
+                            val intent: Intent
                             if (loginResponse?.role == "admin") {
                                 // Arahkan ke halaman admin
-                                startActivity(Intent(this@LoginActivity, DashboardAdmin::class.java))
+//                                startActivity(Intent(this@LoginActivity, DashboardAdmin::class.java))
+                                intent = Intent(this@LoginActivity, DashboardAdmin::class.java)
+                                startActivity(intent)
                             } else if (loginResponse?.role == "jukir") {
                                 // Arahkan ke halaman pengguna biasa
-                                startActivity(Intent(this@LoginActivity, DashboardParking::class.java))
+                                intent = Intent(this@LoginActivity, DashboardParking::class.java)
+
+//                                startActivity(Intent(this@LoginActivity, DashboardParking::class.java))
+                                intent.putExtra("data", loginResponse)
+                                startActivity(intent)
                             }
                         } else {
                             // Handle pesan kesalahan, misalnya, tampilkan pesan kesalahan kepada pengguna

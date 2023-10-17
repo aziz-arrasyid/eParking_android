@@ -8,80 +8,50 @@
     android:id="@+id/parentLayout"
     tools:context=".DashboardParking">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/topCardView"
-        android:layout_width="389dp"
-        android:layout_height="433dp"
-        android:layout_margin="16dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="183dp">
 
-
-        <Button
-            android:id="@+id/addButton"
-            android:layout_width="130dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_button"
-            android:text="Tambah Data"
-            android:textColor="@color/white1"
-            android:translationX="240dp"
-            android:translationY="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/topCardView"
-            app:layout_constraintEnd_toEndOf="@+id/topCardView"
-            app:layout_constraintTop_toTopOf="@+id/topCardView" />
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView"
-            android:layout_width="203dp"
-            android:layout_height="36dp"
-            android:background="@drawable/custom_edittext1"
-            android:translationX="170dp"
-            android:translationY="60dp"
-            app:iconifiedByDefault="false"
-            app:queryHint="Cari..." />
-
-    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/userIcon"
         android:layout_width="40dp"
+        android:contentDescription="@string/icon"
         android:layout_height="40dp"
         android:src="@drawable/user"
         android:textColor="@color/black"
         tools:layout_editor_absoluteX="341dp"
-        tools:layout_editor_absoluteY="43dp" />
+        tools:layout_editor_absoluteY="43dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/userText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hallo, user"
+        android:text="@string/halloUser"
         tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="56dp" />
+        tools:layout_editor_absoluteY="56dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:text="eParking"
+        android:text="@string/app_name"
         android:textColor="@color/blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/logoImageView"
-        tools:layout_editor_absoluteY="43dp"/>
+        tools:layout_editor_absoluteY="43dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="67dp"
+        android:contentDescription="@string/SMK_NEGERI_4_TANJUNGPINANG"
         android:layout_height="53dp"
         android:src="@drawable/logo"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="32dp"/>
+        tools:layout_editor_absoluteY="32dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/nestedCardView"
@@ -93,7 +63,10 @@
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="97dp">
+        tools:layout_editor_absoluteY="97dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/dataTitle"
@@ -101,10 +74,38 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:padding="8dp"
-            android:text="Data Jukir"
+            android:text="@string/dataJukir"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="182dp"
+        app:layout_constraintTop_toBottomOf="@+id/nestedCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/table_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/table"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/table_heading_layout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

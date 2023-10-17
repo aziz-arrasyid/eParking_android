@@ -9,4 +9,13 @@
     <string name="content_description_image_eParking">eParking_image</string>
     <string name="admin">admin</string>
     <string name="parking">jukir</string>
+    <string name="addData">Tambah Data</string>
+    <string name="halloUser">Hallo, user</string>
+    <string name="dataJukir">Data Jukir</string>
+    <string name="icon">icon</string>
+    <string name="No">No</string>
+    <string name="plat">No. Plat</string>
+    <string name="kendaraan">Kendaraan</string>
+    <string name="status">Status</string>
+    <string name="pembayaran">Pembayaran</string>
 </resources>
